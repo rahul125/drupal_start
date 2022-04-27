@@ -1,0 +1,107 @@
+@function tracking( $target ){
+  @return ($target / 1000) * 1rem;
+}
+@mixin tracking( $target ){
+  letter-spacing: tracking( $target );
+}
+//@include tracking(50);
+
+@mixin mxrotate($rotatevalue) {
+  -webkit-transform: rotate($rotatevalue);
+  -moz-transform: rotate($rotatevalue);
+  -ms-transform: rotate($rotatevalue);
+  -o-transform: rotate($rotatevalue);
+  transform: rotate($rotatevalue);
+}
+//@include mxrotate(90deg);
+
+@mixin transition($property: all, $duration: 1.2s, $ease: linear){
+	-webkit-transition: $property $duration $ease;
+	   -moz-transition: $property $duration $ease;
+	     -o-transition: $property $duration $ease;
+	        transition: $property $duration $ease;
+}
+/*
+Usage
+  @include transition(all, 0.2s);
+*/
+
+@mixin input_placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+// @include input-placeholder {
+//   color: rgba(0,0,0, .4);
+// }
+
+
+
+
+
+
+
+@mixin borderadius($standradius) {
+  border-radius: calc(#{$standradius} * var(--text-multiplier, 0.85));
+  -webkit-border-radius: calc(#{$standradius} * var(--text-multiplier, 0.85));
+  -moz-border-radius: calc(#{$standradius} * var(--text-multiplier, 0.85));
+}
+// @include borderadius(1rem);
+
+
+
+
+
+
+$widthbreakpoint:  (
+  "xs": 320.98px, // 321px
+  "ips": 414px,
+  // "ips": 375px, // 375px
+  "sm": 576px, // 576px
+  "md": 768px, // 768px
+  "lg": 992px, // 992px
+  "xl": 1200px, // 1200px
+  "xxl": 1304px, // 1340px
+  "xxxl": 1680px, // 1680px
+
+  "xsmax": 320px, // 320px
+  "ipsmax": 413.98px,
+  // "ipsmax": 374.98px, // 374.98px
+  "smmax": 575.98px, // 575.98px
+  "mdmax": 767.98px, // 767.98px
+  "lgmax": 991.98px, // 991.98px
+  "xlmax": 1199.98px, // 1199.98px
+  "xxlmax": 1303.98px, // 1303.98px
+  "xxxlmax": 1679.98px // 1679.98px
+);
+
+
+//Min
+@mixin respbreakpoint-min($breakpoint) {
+  @if map-has-key($widthbreakpoint, $breakpoint) {
+    $breakpoint-value: map-get($widthbreakpoint, $breakpoint);
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  }
+  @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+//Max
+@mixin respbreakpoint-max($mxbreakpoint) {
+  @if map-has-key($widthbreakpoint, $mxbreakpoint) {
+    $mxbreakpoint-value: map-get($widthbreakpoint, $mxbreakpoint);
+    @media (max-width: $mxbreakpoint-value) {
+      @content;
+    }
+  }
+  @else {
+    @warn 'Invalid breakpoint: #{$mxbreakpoint}.';
+  }
+}
+// Usage
+// @include respbreakpoint-min(md) { }

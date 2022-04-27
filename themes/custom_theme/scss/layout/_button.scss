@@ -1,0 +1,141 @@
+.generalcta {
+  color: $color-white;
+  border: 2px solid $color-white;
+  @include borderadius(#{$radius8px});
+  padding: calc(1.1rem * var(--items-multiplier, 0.65));
+  line-height: 1.3;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  font-weight: 700;
+  margin: 0 0.35rem;
+
+  &.outline {
+    background: transparent;
+
+    &:hover {
+      text-decoration: none;
+      color: $color-white;
+      background: rgba($color-white, 0.15);
+    }
+
+    &-red {
+      border-color: $color-red;
+      color: $color-red;
+
+      &:hover {
+
+        &.hoversolid {
+          color: $color-white;
+          background-color: $color-red;
+        }
+      }
+    }
+  }
+
+  &.solidred {
+    background: $color-red;
+    border-color: $color-red;
+
+    i {
+      color: $color-white;
+      font-size: calc(2rem * var(--text-multiplier, 0.8));
+      line-height: 0;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &.hoversolid {
+    &:hover {
+      background: $color-white;
+      text-decoration: none;
+      color: $color-blue;
+
+      i {
+        color: $color-blue;
+        font-size: calc(2rem * var(--text-multiplier, 0.8));
+        line-height: 0;
+        vertical-align: middle;
+      }
+    }
+  }
+
+
+  &.minw180 {
+    min-width: calc(12.5rem * var(--text-multiplier, 0.8));
+  }
+
+  &.minw160 {
+    text-align: center;
+    min-width: calc(11rem * var(--text-multiplier, 0.8));
+  }
+
+  &.minw120 {
+    text-align: center;
+    min-width: calc(7.5rem * var(--text-multiplier, 0.8));
+  }
+
+  &:hover {
+    color: $color-white;
+    text-decoration: none;
+  }
+
+}
+
+
+.closebtn {
+  color: $color-red;
+  border: 2px solid $color-white;
+  @include borderadius(#{$radius8px});
+  padding: calc(0.6rem * var(--items-multiplier, 0.65));
+  line-height: 1;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  font-weight: 700;
+  margin: 0 auto;
+
+  i {
+    font-size: calc(2rem * var(--text-multiplier, 0.75));
+  }
+}
+
+.readmorebtnms,
+.readmorebtn {
+  color: $color-blue;
+  line-height: 1;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  font-weight: 700;
+  margin: 0 auto;
+
+  i {
+    color: $color-red;
+    margin-top: -2px;
+    margin-left: 0.4em;
+    float: right;
+    font-size: calc(1.45rem * var(--text-multiplier, 0.75));
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+}
+
+.downloadpdf {
+  color: $color-blue;
+  font-weight: 700;
+  line-height: 1;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 1rem auto 0;
+  font-size: calc(0.938rem * var(--text-multiplier, 0.95));
+  text-decoration: underline;
+}

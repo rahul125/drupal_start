@@ -1,0 +1,366 @@
+{#
+/**
+ * @file
+ * Theme override for a menu block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: HTML attributes for the containing element.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * Headings should be used on navigation menus that consistently appear on
+ * multiple pages. When this menu block's label is configured to not be
+ * displayed, it is automatically made invisible using the 'visually-hidden' CSS
+ * class, which still keeps it visible for screen-readers and assistive
+ * technology. Headings allow screen-reader and keyboard only users to navigate
+ * to or skip the links.
+ * See http://juicystudio.com/article/screen-readers-display-none.php and
+ * http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
+ */
+#}
+
+  {# Menu. #}
+
+    
+
+    <header class="topnavigation en-header">
+    <div class="menutopcover">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 px-0">
+            <nav id="maintopnavi" class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand mr-auto" href="/index.html"><img src="/theme/img/logo/dnb-logo.svg" alt="Lorem Ipsum (DNB) Logo" class="mr-2"></a>
+              <div class="row no-gutters padrightadjust">
+              <div class="col-auto ml-auto">
+                <img src="/theme/img/logo/5g-logo.png" class="logo5g d-lg-none" alt="5G">
+                <button class="navbar-toggler px-0" type="button">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+              </div>
+              <div class="d-none d-lg-flex" id="navbarTop">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item pl-0 mx-0 mx-lg-4">
+                  <a class="nav-link menu--company btnjsvoid" href="#">Our Company</a>
+                  </li>
+                  <li class="nav-item pl-0 mx-0 mx-lg-4">
+                  <a class="nav-link menu--future btnjsvoid" href="#">5G Future</a>
+                  </li>
+                  <li class="nav-item pl-0 mx-0 mx-lg-4">
+                  <a class="nav-link menu--media btnjsvoid" href="#">Media</a>
+                  </li>
+                  <!-- <li class="nav-item pl-0 mx-0 mx-lg-4">
+                  <a class="nav-link menu--contact btnjsvoid" href="#">Contact Us</a>
+                  </li> -->
+                  <li class="nav-item pl-0 mx-0 mx-lg-4">
+                    <a class="nav-link jscroll-trigger faqlinks" href="/#faq">FAQ</a>
+                  </li>
+                  <li class="nav-item pl-0 mx-0 mx-lg-4">
+                  <div class="nav-link lang-bar">
+                    <div class="lang-bar-item">
+                    <a id="lang-bm" href="/ms/">BM</a>
+                    </div>
+                    <div class="lang-bar-item">
+                    <a id="lang-en" class="active" href="javascript:void(0);">EN</a>
+                    </div>
+                  </div>
+                  </li>
+                  <li class="nav-item pl-0 mx-0 ml-lg-4 d-none d-lg-block">
+                    <img src="/theme/img/logo/5g-logo.png" class="logo5g" alt="5G">
+                  </li>
+                </ul><!--NavEND-->
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mainavi-submenu">
+      <!--subMenu level 1-->
+
+      <div class="submenu submenu--mobmain">
+      <ul class="navbar-nav mt-0 pt-0 ml-auto">
+        <li class="nav-item">
+        <a class="nav-link monbmenu btnjsvoid" href="#" data-type="submenu--company">Our Company</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link monbmenu btnjsvoid" href="#" data-type="submenu--future">5G Future</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link monbmenu btnjsvoid" href="#" data-type="submenu--media">Media</a>
+        </li>
+        <!-- <li class="nav-item">
+        <a class="nav-link monbmenu btnjsvoid" href="#" data-type="submenu--contact">Contact Us</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link jscroll-trigger faqlinks" href="/#faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+        <div class="nav-link lang-bar">
+          <div class="lang-bar-item">
+          <a href="/ms/">BM</a>
+          </div>
+          <div class="lang-bar-item">
+          <a href="javascript:void(0);" class="active">EN</a>
+          </div>
+        </div>
+        </li>
+        <li class="nav-item pl-0 mx-0 ml-lg-4 d-none d-lg-block">
+          <img src="/theme/img/logo/5g-logo.png" class="logo5g" alt="5G">
+        </li>
+      </ul><!--NavEND-->
+      </div>
+
+      <div class="submenu submenu--company">
+      <div class="container">
+        <div class="row no-gutters">
+        <div class="col-12 col-xl-1">
+          <div class="submenu--backbtn d-lg-none">
+          <a href="#" class="circta btnjsvoid" data-type="submenu--mobmain">
+            <i class="icon-chevron-prev"></i>
+          </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3">
+          <p><strong>About Us</strong></p>
+          <ul class="submenu--list">
+          <li>
+            <a href="/about-us.html" class="submenu--list-button">
+            DNB Role
+            </a>
+          </li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3">
+          <p><strong>Our People</strong></p>
+          <ul class="submenu--list">
+          <li>
+            <a href="/leadership.html" class="submenu--list-button">
+            Board of Directors
+            </a>
+          </li>
+          <li>
+            <a href="/leadership.html#managementeam" class="submenu--list-button">
+            Senior Management Team
+            </a>
+          </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      </div>
+
+
+      <div class="submenu submenu--future">
+      <div class="container">
+        <div class="row no-gutters">
+        <div class="col-12 col-xl-1">
+          <div class="submenu--backbtn d-lg-none">
+          <a href="#" class="circta btnjsvoid" data-type="submenu--mobmain">
+            <i class="icon-chevron-prev"></i>
+          </a>
+          </div>
+        </div>
+        <!-- <div class="col-12 col-lg-4 col-xl-3">
+          <p><strong>Economic Transformation</strong></p>
+          <ul class="submenu--list">
+          <li>
+            <a href="/economic-transformation.html" class="submenu--list-button">
+            Overview
+            </a>
+          </li>
+          </ul>
+        </div> -->
+        <div class="col-12 col-lg-4 col-xl-3">
+          <p><strong>Roll Out Plan</strong></p>
+          <ul class="submenu--list">
+          <li>
+            <a href="/interactive-map.html" class="submenu--list-button">
+            Overview
+            </a>
+          </li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3">
+          <p><strong>5G Benefits</strong></p>
+          <ul class="submenu--list">
+          <li>
+            <a href="/benefits-overview.html" class="submenu--list-button">
+            Overview
+            </a>
+          </li>
+          <!-- <li>
+            <a href="#" class="submenu--list-button btnjsvoid" data-id="menuindus">
+            Industries
+            </a>
+          </li> -->
+          </ul>
+        </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="submenu submenu--media">
+      <div class="container">
+        <div class="row no-gutters">
+        <div class="col-12 col-xl-1">
+          <div class="submenu--backbtn d-lg-none">
+          <a href="#" class="circta btnjsvoid" data-type="submenu--mobmain">
+            <i class="icon-chevron-prev"></i>
+          </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3">
+          <p><strong>DNB News</strong></p>
+          <ul class="submenu--list">
+          <li>
+            <a href="/news.html" class="submenu--list-button">
+            Overview
+            </a>
+          </li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3">
+          <p><strong>Resource Centre</strong></p>
+          <ul class="submenu--list">
+          <li>
+            <a href="/partner-desk.html" class="submenu--list-button">
+            Partner’s Desk
+            </a>
+          </li>
+          <li>
+            <a href="/glossary.html" class="submenu--list-button">
+            Glossary
+            </a>
+          </li>
+          <li>
+            <a href="/white-papers.html" class="submenu--list-button">
+            White Papers
+            </a>
+          </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- <div class="submenu submenu--contact">
+      <div class="container">
+        <div class="row no-gutters">
+        <div class="col-12 col-xl-1">
+          <div class="submenu--backbtn d-lg-none">
+          <a href="#" class="circta btnjsvoid" data-type="submenu--mobmain">
+            <i class="icon-chevron-prev"></i>
+          </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3">
+          <p><strong>Office Details</strong></p>
+          <ul class="submenu--list">
+          <li>
+            <a href="#" class="submenu--list-button">
+            Overview
+            </a>
+          </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      </div> -->
+
+      <!--subMenu level 2-->
+      <div class="submenu submenu--subinner submenu--subinner-menuindus">
+      <div class="container">
+        <div class="row no-gutters">
+        <div class="col-12 col-xl-1">
+          <div class="submenu--backbtn subinnerback">
+          <a href="#" class="circta btnjsvoid" data-type="submenu--future">
+            <i class="icon-chevron-prev"></i>
+          </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <ul class="submenu--list innerlist">
+          <li>
+            <a href="/industries/retail.html">
+            Retail
+            </a>
+          </li>
+          <li>
+            <a href="/industries/education.html">
+            Education
+            </a>
+          </li>
+          <li>
+            <a href="/industries/healthcare.html">
+            Healthcare
+            </a>
+          </li>
+          <li>
+            <a href="/industries/tourism.html">
+            Tourism
+            </a>
+          </li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-lg-3">
+          <ul class="submenu--list innerlist">
+          <li>
+            <a href="/industries/power-and-utilities.html">
+            Power & Utilities
+            </a>
+          </li>
+          <li>
+            <a href="/industries/oil-and-gas.html">
+            Oil & Gas
+            </a>
+          </li>
+          <li>
+            <a href="/industries/manufacturing.html">
+            Manufacturing
+            </a>
+          </li>
+          <li>
+            <a href="/industries/ports.html">
+            Ports
+            </a>
+          </li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-lg-3">
+          <ul class="submenu--list innerlist">
+          <li>
+            <a href="/industries/agriculture.html">
+            Agriculture
+            </a>
+          </li>
+          <li>
+            <a href="/industries/government-public-safety-welfare.html">
+            Government, Public Safety and Welfare
+            </a>
+          </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </header>
+
+</nav>

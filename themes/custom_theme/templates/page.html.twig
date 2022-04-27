@@ -1,0 +1,41 @@
+<body id="page-top" class="scrollnav">
+  
+    {{ page.navigation }}
+
+
+    <main role="main">
+      <section>
+      {{ page.banner }}
+      </section>
+
+     {{ page.content }}
+  
+    </main>
+
+    <footer>
+    {{ page.footer_first }}
+    </footer>
+
+
+    <!--MODAL-->
+    <div class="modal generalmodal" id="videomodal">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-body bg-black">
+                  <div class="row">
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe class="embed-responsive-item" src="" frameborder="0" allowfullscreen="" allow="autoplay; encrypted-media"></iframe>
+                      </div>
+                      <button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="navibg--backdrop"></div>
+    
+</body>

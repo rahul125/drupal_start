@@ -1,0 +1,228 @@
+//TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
+@media (min-width: $min-md) {
+  :root {
+    --title-multiplier: 0.77;
+    --text-multiplier: 0.88;
+    --items-multiplier: 0.77;
+  }
+}
+
+@media (min-width: $min-xl) {
+  :root {
+    --title-multiplier: .98;
+    --text-multiplier: .98;
+    --items-multiplier: 0.85;
+  }
+}
+
+@media (min-width: $min-1680) {
+  :root {
+    --title-multiplier: 1;
+    --text-multiplier: 1;
+    --items-multiplier: 0.9;
+  }
+}
+
+// ORIGINAL - before changing font family
+// @media (min-width: $min-md) {
+//   :root {
+//     --title-multiplier: 0.75;
+//     --text-multiplier: 0.86;
+//     --items-multiplier: 0.75;
+//   }
+// }
+
+// @media (min-width: $min-xl) {
+//   :root {
+//     --title-multiplier: 0.9;
+//     --text-multiplier: 0.9;
+//     --items-multiplier: 0.8;
+//   }
+// }
+
+// @media (min-width: $min-1680) {
+//   :root {
+//     --title-multiplier: 0.95;
+//     --text-multiplier: 0.95;
+//     --items-multiplier: 0.82;
+//   }
+// }
+
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+//h2 { font-size: calc(2.6rem * var(--title-multiplier, 0.72)); }
+
+h1 {
+  &.maintoph1 {
+    font-size: calc(2.9rem * var(--text-multiplier, 0.6));
+    line-height: 1.2;
+    font-weight: 700;
+
+    @media (min-width: $min-xl) {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+h2 {
+  font-size: calc(2.45rem * var(--text-multiplier, 0.73));
+  line-height: calc(1.1 * var(--text-multiplier, 0.9));;
+  font-weight: 300;
+
+  &.larger {
+    font-size: calc(3.75rem * var(--text-multiplier, 0.54));
+    line-height: 1.1;
+  }
+
+  b {
+    font-weight: 700;
+  }
+}
+
+h3 {
+  font-size: calc(1.875rem * var(--text-multiplier, 0.75));
+  line-height: calc(1.1 * var(--text-multiplier, 0.9));;
+  font-weight: 300;
+
+  b {
+    font-weight: 700;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  &.larger {
+    font-size: calc(2rem * var(--text-multiplier, 0.78));
+    line-height: 1.25;
+  }
+}
+
+h4 {
+  font-size: calc(1.35rem * var(--text-multiplier, 0.88));
+  line-height: calc(1.5 * var(--text-multiplier, 0.9));;
+  font-weight: 400;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+
+p {
+  font-size: calc(1.045rem * var(--text-multiplier, 0.88));
+  line-height: calc(1.3 * var(--text-multiplier, 0.95));
+  margin: 0;
+  padding: 0;
+
+  &.larger {
+    font-size: calc(1.125rem * var(--text-multiplier, 0.88));
+    line-height: calc(1.5 * var(--text-multiplier, 0.88));
+  }
+
+  &.font20 {
+    font-size: calc(1.3rem * var(--text-multiplier, 0.88));
+    line-height: 1.4;
+  }
+
+  &.font18 {
+    font-size: calc(1.2rem * var(--text-multiplier, 0.88));
+    line-height: 1.4;
+  }
+
+  &.tinytxt {
+    font-size: calc(0.938rem * var(--text-multiplier, 0.88));
+  }
+
+  &.smallertxt {
+    font-size: calc(0.82rem * var(--text-multiplier, 0.85));
+  }
+
+  &.largermob {
+    font-size: calc(1.125rem * var(--text-multiplier, 0.78));
+    @media (max-width: $max-md) {
+      line-height: 1.15;
+    }
+  }
+
+  &.newmembername {
+    color: $color-blue;
+    line-height: 1;
+
+    b {
+      font-size: calc(1.3rem * var(--text-multiplier, 0.88));
+      font-weight: 700;
+    }
+  }
+
+  &.smarllermob {
+    font-size: calc(1.05rem * var(--text-multiplier, 0.78));
+    @media (max-width: $max-md) {
+      line-height: 1.15;
+    }
+  }
+
+  &.lglheight {
+    line-height: calc(1.5 * var(--text-multiplier, 0.88));
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  + p {
+    margin-top: calc(1rem * var(--text-multiplier, 0.88));
+  }
+
+  a {
+    color: currentColor;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.ctalinks {
+      color: $color-blue;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+.weight {
+  &-light {
+    font-weight: 300;
+  }
+
+  &-bold {
+    font-weight: 700;
+  }
+
+  &-bolder {
+    font-weight: 700;
+  }
+}
+
+
+.font-primary {
+  color: $color-blue;
+}

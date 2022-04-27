@@ -1,0 +1,81 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+<section id="faq" class="standardpad">
+        <div class="container content-tween">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h2 class="mb-4 pb-2 content-tween-item">Frequently Asked Questions</h2>
+            </div>
+          </div>
+          </div>
+          <div class="container">
+           
+ 
+{% for row in rows %}
+
+{% set cus_var = "" %}
+{% if loop.first %}
+
+{% set cus_var = "active" %}
+
+{% endif %}
+<div class="row content-tween">
+              <div class="col-12 col-lg-8 mx-auto fixedoverflowcontainerfaq content-tween-item">
+                <div class="fixedoverflowcover">
+                  <div class="nav nav-pills nav-fill navcontcover">
+    <a class="nav-item nav-link {{ cus_var }}" data-toggle="tab" href="#contmenu{{ loop.index0 }}">{{ row.content['#row']._entity.field_faq_category[0].target_id }}<br class="d-none d-lg-block">the role of Lorem Ipsum  Berhad</a>
+                  </div>
+                        </div>
+                      </div>
+  </div>
+    <div class="row mt-4 pt-lg-2">
+              <div class="col-12 col-lg-8 mx-auto text-left">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active content-tween" id="contmenu{{ loop.index0 }}">
+                    <div id="oneaccordion" class="myaccordion">
+    <div class="card content-tween-item">
+                        <div class="card-header text-left collapsed" data-toggle="collapse" data-target="#faqcont{{ loop.index0 }}">
+                          <div class="row">
+                            <div class="col my-auto"><h3>{{ row.content['#row']._entity.field_question[0].value }}</h3></div>
+                            <div class="col-auto text-right mb-auto">
+                              <div class="cardicons"><i class="icon-plus"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="faqcont{{ loop.index0 }}" class="collapse" data-parent="#oneaccordion">
+                          <div class="card-body">
+                            <p>
+                              {{ row.content['#row']._entity.field_answer[0].value|raw }}
+                            </p>
+                            
+                            
+        
+                        </div>
+                      </div>
+                      </div>
+                        </div>
+                      
+{% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+</div>
+</section>

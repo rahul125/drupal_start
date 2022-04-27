@@ -1,0 +1,25 @@
+global-styling:
+  version: 1.x
+  js:
+    js/jquery.min.js: {}
+    js/bootstrap.bundle.min.js: {}
+    js/slick/slick.min.js: {}
+    js/gsap/TweenLite.min.js: {}
+    js/gsap/TimelineLite.min.js: {}
+    js/gsap/CSSPlugin.min.js: {}
+    js/gsap/TweenMax.min.js: {}
+    js/scrollmagic/ScrollMagic.min.js: {}
+    js/scrollmagic/animation.gsap.min.js: {}
+    js/slick-animation.min.js: {}
+    js/counter/waypoints.min.js: {}
+    js/counter/jquery.counterup.min.js: {}
+    js/main.js: {}
+    js/custom.js: {}
+    js/modernizr-custom.js: {}
+  css:
+    theme:
+      css/bootstrap.min.css: {}
+      css/slick/slick-min.css: {}
+      css/main.css: {}
+      css/animate.min.css: {}
+      

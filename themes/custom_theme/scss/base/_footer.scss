@@ -1,0 +1,69 @@
+footer {
+  position: relative;
+  background-color: $color-greyf8f;
+  padding-top: 3.3rem;
+  padding-bottom: 1.25rem;
+
+  .container {
+    position: relative;
+  }
+
+  @media (min-width: $min-lg) {
+    padding-top: 4.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .footnote {
+    font-size: calc(0.813rem * var(--text-multiplier, 0.88));
+  }
+
+  .connecticon {
+    font-size: calc(1.65rem * var(--text-multiplier, 0.85));
+  }
+
+  a.footnote {
+    color: $color-blk1d1;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+
+  .scrolltotop {
+    right: 0.75rem;
+    position: absolute;
+    background-color: #fff;
+    padding: 0.55rem;
+    line-height: 1;
+    top: -1.8rem;
+    @include borderadius(#{$radius8px});
+    box-shadow: 0 0 20px rgba($color-black, .1);
+    width: auto;
+
+    @media (min-width: $min-lg) {
+      padding: 0.7rem;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    i {
+      display: block;
+      color: $color-red;
+      line-height: 1;
+      font-size: calc(1.7rem * var(--text-multiplier, 0.5));
+    }
+  }
+}
+
+
+.foohead {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  @media (min-width: $min-lg) {
+    text-align: center;
+  }
+}

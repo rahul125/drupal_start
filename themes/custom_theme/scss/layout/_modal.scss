@@ -1,0 +1,75 @@
+.generalmodal {
+  .modal-dialog {
+    margin: 0;
+    padding: 0;
+    .modal-content {
+      background-color: transparent;
+      color: $color-blk1d1;
+      border-radius: 0;
+      border: none;
+      margin: 0;
+      padding: 0;
+
+      .modal-body {
+        @include borderadius(#{$radius20px});
+        // margin-bottom: calc(1.4rem * var(--text-multiplier, 0.83));
+        // padding: calc(3.125rem * var(--text-multiplier, 0.6));
+        margin: 0;
+        padding: 0;
+        border: 0 !important;
+        background: $color-white;
+      }
+
+      .modal-footer {
+        padding: 0 !important;
+        margin: 0 !important;
+        border: 0 !important;
+        background: transparent !important;
+      }
+
+      .closebtn {
+        background: $color-white;
+        position: fixed;
+        z-index: 2;
+        right: 0.75rem;
+        top: 0.75rem;
+        width: auto;
+        padding: calc(0.6rem * var(--items-multiplier, 0.45));
+
+        i {
+         font-size: calc(2rem * var(--text-multiplier, 0.6));
+        }
+
+        @media (min-width: $min-md) {
+          right: 2rem;
+          top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+#videomodal,
+#videomodalmp4 {
+  .modal-dialog {
+    max-width: 100% !important;
+
+    .modal-content,
+    .modal-body {
+      border: 0;
+      box-shadow: none;
+      background: transparent !important;
+      // padding: 0 calc(1rem * var(--text-multiplier, 0.6));
+      padding: 0;
+    }
+  }
+}
+
+
+.modal-backdrop.show {
+  opacity: 1;
+}
+
+.modal-backdrop.opacity80 {
+  opacity: .8 !important;
+}

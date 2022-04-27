@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+    
+    <div class="hero-banner">
+          <div class="hero-banner-items videoslideimg">
+            <div class="videobgoverlay"></div>
+            <div class="bgoverlay2"></div>
+            <video playsinline webkit-playsinline autoplay loop="true" muted width="1280" height="720" class="videoplay">
+              <source type="video/mp4" src="/theme/video/hero-banner.mp4">
+            </video>
+            <div class="container textcover">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                      <h1 class="hero-banner-title animated" data-animation-in="fadeInUp">{{ content.field_banner_title }}</h1>
+                      <p class="hero-banner-subtitle animated" data-animation-in="fadeInUp" data-delay-in="0.6">{{ content.body }}</p>
+                        <a href="https://www.youtube.com/watch?v=5qap5aO4i9A" class="generalcta solidred yvideo animated" data-animation-in="fadeInUp" data-delay-in="0.85" target="_blank"><i class="icon-play"></i></a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          
+        </div>
+        <a href="#content" class="jscroll-trigger mianBannerarrowdown anibounce"><img src="/theme/img/arrow-down.png" alt="arrow down"></a>

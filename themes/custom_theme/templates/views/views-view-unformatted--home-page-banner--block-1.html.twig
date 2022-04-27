@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+<div class="hero-banner">
+{% for row in rows %}
+    
+
+    <div class="hero-banner-items videoslideimg">
+            <div class="videobgoverlay"></div>
+            <div class="bgoverlay2"></div>
+            <video playsinline webkit-playsinline autoplay loop="true" muted width="1280" height="720" class="videoplay">
+              <source type="video/mp4" src="{{file_url(row.content['#row']._entity.field_desktop_banner.entity.uri.value)}}
+
+">
+            </video>
+            <div class="container textcover">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                      <h1 class="hero-banner-title animated" data-animation-in="fadeInUp">{{ row.content['#row']._entity.title[0].value }}</h1>
+                      <p class="hero-banner-subtitle animated" data-animation-in="fadeInUp" data-delay-in="0.6">{{ row.content['#row']._entity.field_banner_text[0].value }}</p>
+                        <a href="https://www.youtube.com/watch?v=5qap5aO4i9A" class="generalcta solidred yvideo animated" data-animation-in="fadeInUp" data-delay-in="0.85" target="_blank"><i class="icon-play"></i></a>
+                    </div>
+                </div>
+            </div>
+          </div>
+  
+{% endfor %}
+</div>
+<a href="#content" class="jscroll-trigger mianBannerarrowdown anibounce"><img src="/theme/img/arrow-down.png" alt="arrow down"></a>

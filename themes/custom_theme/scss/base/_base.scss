@@ -1,0 +1,21 @@
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+  color: $color-blk1d1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+
+hr {
+  border-color: rgba($color-blk1d1, 0.2);
+}
+
+.slick-slide {
+  outline: none;
+}
