@@ -1,0 +1,7 @@
+spacebee_form.spacebee_form:
+  path: '/admin/spacebee-form'
+  defaults:
+    _form: '\Drupal\spacebee\Form\SpacebeeForm'
+    _title: 'Custom Form'
+  requirements:
+    _permission: 'access custom form'

@@ -1,0 +1,3 @@
+services:
+ spacebee.test:
+   class: Drupal\spacebee\HelloServices

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains spacebee.module.
+ */
+
+
+
+/**
+ * Implements hook_theme().
+ */
+function spacebee_theme() {
+  $theme['custom_block'] = [
+    'variables' => [
+      'current_time' => NULL,
+      'country' => NULL,
+      'city' => NULL,
+    ],
+    'template' => 'custom-block',
+  ];
+
+  return $theme;
+}

@@ -1,0 +1,12 @@
+spacebee_form.spacebee_form_menu_link:
+  title: 'Custom form'
+  route_name: spacebee_form.spacebee_form
+  description: 'Access the custom form page'
+  parent: system.admin
+  weight: 1
+
+spacebee_form.admin:
+  title: 'Custom form'
+  description: 'Access the custom form page'
+  parent: system.admin_config_system
+  route_name: spacebee_form.spacebee_form  
