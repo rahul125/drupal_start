@@ -2,7 +2,7 @@
 namespace  Drupal\spacebee;
 
 /**
-* @file providing the service that generate random number between 1000 to 9999.
+* @file providing the service that return timezone date.
 *
 */
 
@@ -10,6 +10,7 @@ class HelloServices {
 
  public function get_currenttime()
  {
+    \Drupal::service('page_cache_kill_switch')->trigger();
  	$config = \Drupal::getContainer()->get('config.factory')->getEditable('spacebee.adminsettings');
 
  	$timezone_saved = $config->get('timezone');
