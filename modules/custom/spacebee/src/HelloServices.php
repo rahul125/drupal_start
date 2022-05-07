@@ -10,7 +10,7 @@ class HelloServices {
 
  public function get_currenttime()
  {
-    \Drupal::service('page_cache_kill_switch')->trigger();
+    //\Drupal::service('page_cache_kill_switch')->trigger();
  	$config = \Drupal::getContainer()->get('config.factory')->getEditable('spacebee.adminsettings');
 
  	$timezone_saved = $config->get('timezone');

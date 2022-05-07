@@ -59,6 +59,11 @@ class ExampleBlock extends BlockBase implements ContainerFactoryPluginInterface 
     '#current_time' => $this->ss->get_currenttime(),
     '#country' => $config->get('country'),
     '#city' => $config->get('city'),
+    '#cache' => [
+         'tags' => [
+            'config:spacebee.adminsettings'   
+         ],   
+       ],
     ];
   }
 
